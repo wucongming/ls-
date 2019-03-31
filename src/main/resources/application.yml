@@ -1,0 +1,35 @@
+
+spring:
+  mvc:
+    static-path-pattern: /**  #配置了WebMvcConfigurationSupport在配置文件配置这个就失效
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${file.base-path}
+
+  datasource:
+    url: jdbc:mysql://localhost/school?serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+
+  http:
+    encoding:
+      force: true
+      charset: utf-8
+      enabled: true
+
+
+
+
+server:
+  port: 8082
+
+
+file:
+  base-path: F:\\image\\
+  head-path: F:\\image\\head\\
+  course-path: F:\\image\\course\\
